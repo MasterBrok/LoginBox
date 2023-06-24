@@ -1,0 +1,180 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cc="clr-namespace:LoginBox.CoustomControls.Shapes"
+    xmlns:ccm="clr-namespace:LoginBox.CoustomControls.Controls"
+    >
+    <Style TargetType="{x:Type cc:ccSvgWelcome}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type cc:ccSvgWelcome}">
+                    <Grid>
+                        <Path
+                            Data="M31.908 26.249l-5.852-10.822c0.597-1.355 0.931-2.852 0.931-4.428 0-6.072-4.922-10.994-10.994-10.994-6.073 0-10.995 4.923-10.995 10.994 0 1.614 0.351 3.145 0.974 4.524l-5.878 10.721c-0.19 0.345-0.158 0.77 0.079 1.084 0.237 0.314 0.638 0.461 1.022 0.371l5.019-1.151 1.718 4.785c0.134 0.372 0.474 0.63 0.867 0.659 0.025 0.002 0.050 0.003 0.074 0.003 0.366 0 0.706-0.201 0.881-0.527l5.116-9.53c0.369 0.038 0.744 0.057 1.123 0.057 0.347 0 0.69-0.018 1.029-0.050l5.227 9.532c0.177 0.323 0.514 0.52 0.877 0.52 0.026 0 0.052-0.001 0.078-0.003 0.392-0.032 0.73-0.289 0.863-0.659l1.718-4.785 5.020 1.151c0.385 0.093 0.782-0.057 1.020-0.369s0.27-0.735 0.084-1.081zM9.056 28.542l-1.258-3.505c-0.172-0.477-0.671-0.754-1.165-0.637l-3.712 0.852 4.231-7.718c1.393 1.883 3.373 3.303 5.67 3.994zM7.007 10.999c0-4.955 4.032-8.986 8.986-8.986s8.985 4.031 8.985 8.986-4.031 8.986-8.986 8.986c-4.955 0-8.986-4.032-8.986-8.986zM25.367 24.4c-0.496-0.117-0.993 0.16-1.165 0.636l-1.267 3.53-3.849-7.017c2.357-0.691 4.386-2.148 5.797-4.085l4.214 7.791z"
+                            Stretch="Fill"
+                            StrokeThickness="2"
+                            >
+                            <Path.Fill>
+                                <SolidColorBrush Color="#D7FCC0"/>
+                            </Path.Fill>
+                            <Path.Stroke>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#99FFFF" Offset="0.4"/>
+                                    <GradientStop Color="#1E7D7D" Offset="0.8"/>
+                                </LinearGradientBrush>
+                            </Path.Stroke>
+                        </Path>
+                        <Path
+                            Data="M31.908 26.249l-5.852-10.822c0.597-1.355 0.931-2.852 0.931-4.428 0-6.072-4.922-10.994-10.994-10.994-6.073 0-10.995 4.923-10.995 10.994 0 1.614 0.351 3.145 0.974 4.524l-5.878 10.721c-0.19 0.345-0.158 0.77 0.079 1.084 0.237 0.314 0.638 0.461 1.022 0.371l5.019-1.151 1.718 4.785c0.134 0.372 0.474 0.63 0.867 0.659 0.025 0.002 0.050 0.003 0.074 0.003 0.366 0 0.706-0.201 0.881-0.527l5.116-9.53c0.369 0.038 0.744 0.057 1.123 0.057 0.347 0 0.69-0.018 1.029-0.050l5.227 9.532c0.177 0.323 0.514 0.52 0.877 0.52 0.026 0 0.052-0.001 0.078-0.003 0.392-0.032 0.73-0.289 0.863-0.659l1.718-4.785 5.020 1.151c0.385 0.093 0.782-0.057 1.020-0.369s0.27-0.735 0.084-1.081zM9.056 28.542l-1.258-3.505c-0.172-0.477-0.671-0.754-1.165-0.637l-3.712 0.852 4.231-7.718c1.393 1.883 3.373 3.303 5.67 3.994zM7.007 10.999c0-4.955 4.032-8.986 8.986-8.986s8.985 4.031 8.985 8.986-4.031 8.986-8.986 8.986c-4.955 0-8.986-4.032-8.986-8.986zM25.367 24.4c-0.496-0.117-0.993 0.16-1.165 0.636l-1.267 3.53-3.849-7.017c2.357-0.691 4.386-2.148 5.797-4.085l4.214 7.791z"
+                            Stretch="Fill"
+                            Stroke="Gold"
+                            >
+                        </Path>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type ccm:ccTextBox}">
+        <Setter Property="Width" Value="250"/>
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="Foreground" Value="Beige"/>
+        <Setter Property="BorderBrush" Value="LightCyan"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="#00003D"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="Margin"  Value="2"/>
+        <Setter Property="Padding"  Value="2"/>
+        <Setter Property="Validation.ErrorTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid Margin="10 5 0 0" VerticalAlignment="Center" HorizontalAlignment="Left">
+                        <Path Data="M13 3C7.4889941 3 3 7.4889982 3 13C3 18.511002 7.4889941 23 13 23C15.396509 23 17.597385 22.148986 19.322266 20.736328L25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969L20.736328 19.322266C22.148985 17.597385 23 15.396507 23 13C23 7.4889982 18.511006 3 13 3 z M 13 5C17.430126 5 21 8.5698765 21 13C21 17.430123 17.430126 21 13 21C8.5698737 21 5 17.430123 5 13C5 8.5698765 8.5698737 5 13 5 z M 9.5 10 A 1.5 1.5 0 0 0 9.5 13 A 1.5 1.5 0 0 0 9.5 10 z M 16.5 10 A 1.5 1.5 0 0 0 16.5 13 A 1.5 1.5 0 0 0 16.5 10 z M 13 15C10.940666 15 9.4023437 16.197266 9.4023438 16.197266 A 1.000787 1.000787 0 1 0 10.597656 17.802734C10.597656 17.802734 11.745334 17 13 17C14.254666 17 15.402344 17.802734 15.402344 17.802734 A 1.000787 1.000787 0 1 0 16.597656 16.197266C16.597656 16.197266 15.059334 15 13 15 z"
+                              Fill="#431558" Stretch="Uniform"/>
+                        <Grid.Triggers>
+                            <EventTrigger RoutedEvent="Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard AutoReverse="True" Duration="0:0:1" RepeatBehavior="Forever">
+                                        <ThicknessAnimation
+                                            Storyboard.TargetProperty="Margin"
+                                            To="70 5 0 0"
+                                            />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Grid.Triggers>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ccm:ccTextBox}">
+
+                    <Border
+                        x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="5">
+                        <ScrollViewer
+                            x:Name="PART_ContentHost"
+                            Focusable="false"
+                            HorizontalScrollBarVisibility="Hidden"
+                            VerticalScrollBarVisibility="Hidden" />
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Foreground" Value="White" />
+                            <Setter Property="BorderBrush" Value="LightBlue" />
+                            <Setter Property="BorderThickness" Value="2" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="False">
+                            <Setter Property="Foreground" Value="SeaGreen" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type ccm:ccButton}">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="BorderBrush" Value="FloralWhite"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Background" Value="#00001F"/>
+        <Setter Property="Width" Value="120"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Validation.ErrorTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Label Content="Error" Foreground="White" FontSize="34"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ccm:ccButton}">
+
+                    <Border
+                        x:Name="brdMain"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="10">
+                        <Label Content="{TemplateBinding Content}"
+                               Foreground="{TemplateBinding Foreground}"
+                               HorizontalContentAlignment ="{TemplateBinding HorizontalContentAlignment }"
+                               VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                               />
+                        <Validation.ErrorTemplate>
+                            <ControlTemplate>
+                                <Border Background="Red"/>
+                            </ControlTemplate>
+                        </Validation.ErrorTemplate>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="Click">
+                            <BeginStoryboard>
+                                <Storyboard AutoReverse="True" Duration="0:0:0.2" SpeedRatio="0.2">
+                                    <ColorAnimation
+                                        Storyboard.TargetName="brdMain" To="#505075"
+                                        Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"
+                                        Duration="0:0:0:2"
+                                        />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <Trigger Property="IsMouseOver" Value="True" >
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation
+                                            Storyboard.TargetName="brdMain" To="#00004A"
+                                            Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"
+                                            Duration="0:0:0:2"
+                                            />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation
+                                            Storyboard.TargetName="brdMain" To="#00001F"
+                                            Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"
+                                            Duration="0:0:0:2"
+                                            />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

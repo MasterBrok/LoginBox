@@ -1,0 +1,151 @@
+﻿<Window x:Class="LoginBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoginBox"
+        xmlns:sh="clr-namespace:LoginBox.CoustomControls.Shapes"
+        xmlns:cs="clr-namespace:LoginBox.CoustomControls.Controls"
+        xmlns:val="clr-namespace:LoginBox.Validation"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown"
+        Height="450"
+        Width="400"
+        >
+    <Window.Resources>
+        <!--ID Telegram : @BrokDevelopre-->
+        <val:ValidationLoginBox x:Key="validate"/>
+    </Window.Resources>
+    <Border x:Name="brdMain">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#00001C" Offset="0.4"/>
+                <GradientStop Color="#000021" Offset="0.6"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <!--Start Grid 1-->
+            <Grid>
+                <Label
+                    Content=".Welcome." VerticalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontFamily="seabright"
+                    FontSize="30"
+                    Width="200"
+                    >
+                    <Label.Foreground>
+                        <LinearGradientBrush>
+                            <GradientStop Color="CadetBlue" Offset="0.4"/>
+                            <GradientStop Color="Gainsboro" Offset="0.9"/>
+                            <GradientStop Color="Coral" Offset="0.4"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+            </Grid>
+            <!--End Grid 1-->
+
+
+            <!--Start Grid 2-->
+            <StackPanel Grid.Row="1">
+
+                <!--Start Border In Grid-->
+                <Border Width="90" Height="90"
+                        Margin="5"
+                        BorderBrush="White" BorderThickness="1" CornerRadius="10"
+                        Opacity="0.7"
+                        >
+                    <Grid Margin="5">
+                        <sh:ccSvgWelcome/>
+                    </Grid>
+                </Border>
+                <!--End Border In Grid-->
+                <StackPanel Margin="10 15">
+                    <StackPanel Orientation="Horizontal" Margin="5 10">
+                        <Label  Content="User Name"
+                               Foreground="White"
+                               VerticalAlignment="Center"/>
+                        <cs:ccTextBox x:Name="txtUserName"  Margin="5" >
+                            <cs:ccTextBox.Text>
+                                <Binding Path="UserName" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <val:ValidationLoginBox ValidatesOnTargetUpdated="True"/>
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </cs:ccTextBox.Text>
+                        </cs:ccTextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5 10">
+                        <Label Content="Password " Foreground="White"/>
+                        <PasswordBox x:Name="pbPasswordBox"
+                                     Height="35"
+                                     Width="250"
+                                     Margin="12 0 0 0"
+                                     Style="{StaticResource stPasswordBox}">
+                        </PasswordBox>
+                    </StackPanel>
+                    <cs:ccButton
+                        Margin="25"
+                        x:Name="btdLogin">
+                        <cs:ccButton.Style>
+                            <Style TargetType="cs:ccButton">
+                                <Setter Property="Width" Value="120"/>
+                                <Setter Property="Content" Value="Login"/>
+                                <Setter Property="IsEnabled" Value="True"/>
+                                <Style.Triggers>
+                                    <MultiDataTrigger >
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition
+                                                Binding="{Binding ElementName=txtUserName
+                                                ,Path=(Validation.HasError)}"
+                                                Value="True"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter Property="Width" Value="10"/>
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                        <Setter Property="Content" Value="{x:Null}"/>
+                                        <MultiDataTrigger.EnterActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation
+                                                        Storyboard.TargetProperty="Width"
+                                                        To="20"
+                                                        />
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </MultiDataTrigger.EnterActions>
+                                        <MultiDataTrigger.ExitActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation
+                                                        Storyboard.TargetProperty="Width"
+                                                        To="120"
+                                                        />
+                                                </Storyboard>
+                                            </BeginStoryboard>
+
+                                        </MultiDataTrigger.ExitActions>
+                                    </MultiDataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </cs:ccButton.Style>
+                    </cs:ccButton>
+                </StackPanel>
+            </StackPanel>
+            <!--Start Grid 2-->
+            <Grid Grid.Row="2">
+
+            </Grid>
+
+            <!--End Grid 2-->
+
+        </Grid>
+    </Border>
+</Window>
